@@ -1,0 +1,40 @@
+{
+    "name": "ournameismud/mudfilters",
+    "description": "Plugin for custom Mud filters",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "mud filters"
+    ],
+    "support": {
+        "docs": "https://github.com/ournameismud/mudfilters/blob/master/README.md",
+        "issues": "https://github.com/ournameismud/mudfilters/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "@cole007",
+            "homepage": "http://ournameismud.co.uk/"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1"
+    },
+    "autoload": {
+        "psr-4": {
+          "ournameismud\\mudfilters\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Mud Filters",
+        "handle": "mudfilters",
+        "hasCpSettings": false,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/ournameismud/mudfilters/master/CHANGELOG.md",
+        "class": "ournameismud\\mudfilters\\MudFilters"
+    }
+}
