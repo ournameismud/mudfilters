@@ -38,7 +38,7 @@ class MudFiltersTwigExtension extends \Twig_Extension
     public function getFilters()
     {
         return [
-            new \Twig_SimpleFilter('with', [$this, 'with']),
+            new \Twig_SimpleFilter('with', [$this, 'with']),            
         ];
     }
 
@@ -48,7 +48,8 @@ class MudFiltersTwigExtension extends \Twig_Extension
     public function getFunctions()
     {
         return [
-            new \Twig_SimpleFunction('with', [$this, 'witha `with` w']),
+            new \Twig_SimpleFunction('with', [$this, 'with']),
+            new \Twig_SimpleFunction('ratio', [$this, 'ratio']),
         ];
     }
 
@@ -65,5 +66,11 @@ class MudFiltersTwigExtension extends \Twig_Extension
             if ($value[$filterKey] != $filterValue) unset($src[$key]);            
         }
         return $src;
+    }
+    public function ratio($ratio)
+    {
+        $ratio = explode(':',$ratio);
+        $ratio['percent'] = $ratio[1] / $ratio[0];
+        return $ratio;
     }
 }
