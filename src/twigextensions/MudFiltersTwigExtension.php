@@ -70,7 +70,8 @@ class MudFiltersTwigExtension extends \Twig_Extension
     public function ratio($ratio)
     {
         $ratio = explode(':',$ratio);
-        $ratio['percent'] = $ratio[1] / $ratio[0];
+        $ratio['float'] = ($ratio[1] / $ratio[0]);
+        $ratio['percent'] = (($ratio[1] / $ratio[0]) * 100);
         return $ratio;
     }
 }
